@@ -25,6 +25,10 @@ app.use(express.static('public'));
 app.use('/auth', authRoutes);
 app.use('/centres', centreRoutes);
 
+app.get('/login', (req, res) => {
+    res.render('admin');
+});
+
 app.get('/', (req, res) => {
     res.redirect('/centres');
 });
@@ -44,7 +48,8 @@ const seedDatabase = async () => {
         password: 'pass1' 
       },
       { username: 'Vijay', 
-        password: 'pass2' 
+        password: 'pass2' ,
+        isadmin: true
       },
       { username: 'Karthik', 
         password: 'pass3' 
