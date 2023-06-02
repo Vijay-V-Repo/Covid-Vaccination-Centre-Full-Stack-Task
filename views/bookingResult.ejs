@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Result</title>
+</head>
+<body>
+  <h1>Booking Result</h1>
+  <% if (bookingSuccessful) { %>
+    <p>Vaccination slot booked successfully!</p>
+    <p><br><a href="/centres">Home Page</a></p>
+  <% } else { %>
+    <p>Booking failed. Please try again later.</p>
+  <% } %>
+</body>
+</html>

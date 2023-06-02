@@ -12,14 +12,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-// To Search vaccination centres
+// To Search for vaccination centres
 router.get('/search', async (req, res) => {
   try {
     const searchTerm = req.query.q;
     const centres = await VaccinationCentre.find({
       $or: [
-        { name: { $regex: searchTerm, $options: 'i' } },
-        { workingHours: { $regex: searchTerm, $options: 'i' } },
+        { name: { $regex: new RegExp(searchTerm, 'i') } },
+        { workingHours: { $regex: new RegExp(searchTerm, 'i') } },
       ],
     });
     res.render('search', { centres });
@@ -28,46 +28,35 @@ router.get('/search', async (req, res) => {
   }
 });
 
-// To Book a vaccination slot
+
+// To Handle search form submission
+router.post('/search', (req, res) => {
+  const searchTerm = req.body.q;
+  res.redirect(`/centres/search?q=${searchTerm}`);
+});
+
+
+// Book a vaccination slot
 router.post('/:centreId/book', async (req, res) => {
   try {
     const centreId = req.params.centreId;
     const centre = await VaccinationCentre.findById(centreId);
-
     if (!centre) {
-      return res.send('Vaccination Centre Not found :(');
+      return res.send('Vaccination Centre Not Found :(');
     }
 
-    if (centre.capacity <= 0) {
-      return res.send('Currently No Slots Available.');
+    if (centre.availableSlots === 0) {
+      return res.send('Currently No available Slots.');
     }
 
-    // Check if the user is already booked for the same day
-    const today = new Date().toISOString().split('T')[0];
-    const existingBooking = await Booking.findOne({
-      centre: centreId,
-      user: req.user._id,
-      date: today,
-    });
-
-    if (existingBooking) {
-      return res.send('You have already booked a slot.');
-    }
-
-    // To Create a new booking
-    const booking = new Booking({
-      centre: centreId,
-      user: req.user._id,
-      date: today,
-    });
-
-    centre.capacity--;
+    centre.availableSlots -= 1;
+    centre.capacity -= 1;
     await centre.save();
-    await booking.save();
 
-    res.send('Vaccination Slot has been booked successfully');
+    res.render('bookingResult', { bookingSuccessful: true, remainingCapacity: centre.capacity });
   } catch (error) {
-    console.error(error);
+    console.error('Booking error:', error);
+    res.render('bookingResult', { bookingSuccessful: false });
   }
 });
 
