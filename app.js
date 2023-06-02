@@ -5,6 +5,8 @@ const centreRoutes = require('./routes/centres');
 
 const app = express();
 const path = require('path'); 
+app.use(express.json());
+
 
 mongoose.connect('mongodb://127.0.0.1:27017/vaccination_booking', {
   useNewUrlParser: true,
@@ -16,10 +18,16 @@ mongoose.connect('mongodb://127.0.0.1:27017/vaccination_booking', {
 })
   .catch((error) => console.error('Failed to connect to MongoDB', error));
 
-app.use(express.json());
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.use('/auth', authRoutes);
 app.use('/centres', centreRoutes);
+
+app.get('/', (req, res) => {
+    res.redirect('/centres');
+});
 
 app.listen(3000, () => {
   console.log(`Server is running on port 3000`);

@@ -15,4 +15,8 @@ const vaccinationCentreSchema = new mongoose.Schema({
   },
 });
 
+vaccinationCentreSchema.virtual('availableSlots').get(function () {
+  return this.capacity > 0;
+});
+
 module.exports = mongoose.model('VaccinationCentre', vaccinationCentreSchema);

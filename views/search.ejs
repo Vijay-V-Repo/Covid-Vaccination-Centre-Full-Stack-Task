@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaccination Centres</title>
+</head>
+<body>
+  <h1>Search Vaccination Centres</h1>
+  <form action="/centres/search" method="GET">
+    <input type="text" name="q" placeholder="Search by name or working hours" required>
+    <button type="submit">Search</button>
+  </form>
+  <h2>Search Results</h2>
+  <% if (centres.length > 0) { %>
+    <ul>
+      <% centres.forEach(centre => { %>
+        <li>
+          <strong>Name:</strong> <%= centre.name %><br>
+          <strong>Working Hours:</strong> <%= centre.workingHours %><br>
+          <strong>Capacity:</strong> <%= centre.capacity %><br>
+          <strong>Available Slots:</strong> <%= centre.availableSlots ? 'Yes' : 'No' %><br>
+          <% if (centre.availableSlots) { %>
+            <form action="/centres/<%= centre._id %>/book" method="POST">
+              <button type="submit">Book Slot</button>
+            </form>
+          <% } else { %>
+            <p>No available slots</p>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No vaccination centres found</p>
+  <% } %>
+</body>
+</html>
