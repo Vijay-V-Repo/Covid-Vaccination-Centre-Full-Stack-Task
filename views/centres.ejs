@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
   <title>Vaccination Centres</title>
 </head>
 <body>
-  <h1>  --- Vaccination Centres --- </h1>
-  <ul>
+  <h1>Vaccination Centres in Tamilnadu</h1>
+
+  <a href="centres/search">Search by Centre Name or Working</a>
+    
     <% centres.forEach(centre => { %>
-      <li>
+      <hr>
         <strong>Name:</strong> <%= centre.name %><br>
         <strong>Working Hours:</strong> <%= centre.workingHours %><br>
         <strong>Capacity:</strong> <%= centre.capacity %><br>
-        <strong>Available Slots:</strong> <%= centre.availableSlots ? 'Yes' : 'No' %><br>
+        <strong>Available Slots:</strong> <%= centre.availableSlots ? 'Yes' : 'No' %><br><br>
         <% if (centre.availableSlots) { %>
           <form action="/centres/<%= centre._id %>/book" method="POST">
             <button type="submit">Book Slot</button>
@@ -21,10 +24,10 @@
         <% } else { %>
           <p>No available slots</p>
         <% } %>
-        <br>
-      </li>
+        <hr>
     <% }) %>
-  </ul>
+
+  <a href="auth/logout">Logout</a>
 
 </body>
 </html>

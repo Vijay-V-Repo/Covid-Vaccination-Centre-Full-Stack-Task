@@ -2,21 +2,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
 const centreRoutes = require('./routes/centres');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
 const path = require('path'); 
 app.use(express.json());
 
-
 mongoose.connect('mongodb://127.0.0.1:27017/vaccination_booking', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-})
-  .then(() => {
+}).then(() => {
     console.log('Connection to MongoDB : Established'); 
     seedDatabase();
-})
-  .catch((error) => console.error('Failed to connect to MongoDB', error));
+}).catch((error) => console.error('Failed to connect to MongoDB', error));
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
@@ -24,19 +22,18 @@ app.use(express.static('public'));
 
 app.use('/auth', authRoutes);
 app.use('/centres', centreRoutes);
-
-app.get('/login', (req, res) => {
-    res.render('admin');
-});
+app.use('/admin', adminRoutes);
 
 app.get('/', (req, res) => {
-    res.redirect('/centres');
+    res.render('index');
 });
 
 app.listen(3000, () => {
   console.log(`Server is running on port 3000`);
 });
 
+
+// Seeding the Database 
 const seedDatabase = async () => {
     const User = require('./models/user');
     const VaccinationCentre = require('./models/vaccinationCentre');
@@ -108,5 +105,5 @@ const seedDatabase = async () => {
       },
     ]);
     console.log('Seeded the database.');
-  };
+};
   

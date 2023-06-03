@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Login</h1>
+    <h1>User Login</h1>
     <form action="/auth/login" method="POST">
       <div class="form-group">
         <label for="username">Username</label>
@@ -17,8 +17,11 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Login </button>
     </form>
+
+    <p>New User? <a href="/auth/signup">Sign up</a></p>
+
   </div>
 </body>
 </html>

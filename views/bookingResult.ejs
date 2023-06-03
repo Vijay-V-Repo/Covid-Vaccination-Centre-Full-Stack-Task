@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
   <title>Booking Result</title>
 </head>
 <body>
-  <h1>Booking Result</h1>
+  <h1>Your Booking Result</h1>
+  <hr>
+  <div class="result-box">
   <% if (bookingSuccessful) { %>
-    <p>Vaccination slot booked successfully!</p>
-    <p><br><a href="/centres">Home Page</a></p>
+    <a>Status</a><p>Vaccination slot booked successfully!</p>
+    <p>Your Booking ID: <span id="userID"></span></p>
+    <p>Vaccination Center: <span><%= name %></span></p>
+    <p>Date: <span><%= new Date().toLocaleDateString() %></span></p>
+    <p>Visiting Time: <span><%= time %></span></p>
+    <p>Kindly follow the guidelines of the COVID Prevention Measures.</p>
+    <p>Your Booking Details will be sent to you through email.</p>
+    <p><a href="/centres">Go to Home Page</a></p>
   <% } else { %>
     <p>Booking failed. Please try again later.</p>
   <% } %>
+  </div>
+
+  <script>
+    function generateUserID() {
+      const randomID = Math.floor(Math.random() * 1000000);
+      return randomID;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const userIDElement = document.getElementById('userID');
+      userIDElement.textContent = generateUserID();
+    });
+  </script>
+
 </body>
 </html>
