@@ -58,27 +58,34 @@ Once you have the prerequisites installed, follow the below steps to run the app
 
 ## Application Preview
 
-![Screenshot (104)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/2a06032d-0c1e-4c45-9e54-6fa50444630a)
+![Screenshot (104)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/8cb4216d-7581-4107-bf30-e4517ac13bf9)
 
-![Screenshot (106)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/2280a03a-0499-4d07-a526-b579e3460868)
+![Screenshot (106)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/af8af100-84f3-47e7-8046-b4e962292252)
 
-![Screenshot (111)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/c40d0dc9-7291-49f6-ada7-b482390b07e5)
+![Screenshot (111)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/7b82a02d-00ae-48a1-bc65-8404ba6a9859)
 
-![Screenshot (108)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/a41b060e-1a1b-4ff3-9226-50775fc27e89)
+![Screenshot (107)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/6740e57c-10c0-4b37-ad2f-ae064b36ef01)
 
-![Screenshot (109)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/a34dfd8e-ff41-4888-910d-86b48e1f56ac)
+![Screenshot (108)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/3c5ecae1-1272-47f6-963b-8721f2546875)
 
-![Screenshot (110)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/1c047a29-134f-484a-83d2-35cf5af8fc51)
+![Screenshot (109)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/6d4b262a-70b1-4767-89e9-24b68d68ad1f)
 
-![Screenshot (112)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/e220d6b4-e6c7-4b85-88a6-2c96abf5c58c)
+![Screenshot (112)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/55bd3347-0b3f-48e0-89f8-dc3f6341dba7)
 
-![Screenshot (113)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/2385a611-7395-4aeb-b21c-d3c5fc432dc5)
+![Screenshot (113)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/bc5f4d26-75ac-473a-8e5b-f5e60c8d85e1)
 
-![Screenshot (114)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/83379b03-7909-4ca5-945a-80b4767534ec)
+![Screenshot (114)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/5d13f089-82bf-490a-81c6-90ab314a598c)
 
-![Screenshot (115)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/2fe22a86-dd1b-4ac8-b4d7-aa27e57550e9)
+![Screenshot (115)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/4b872d13-6e70-4df1-be98-cabd025f1653)
 
-![Screenshot (105)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/090a09e3-c51c-40cb-b64d-db02a3b56b2c)
+![Screenshot (105)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/94f526a0-e51d-488c-8d6b-9be54aa75b89)
+
+
+
+
+
+
+
 
 
 
