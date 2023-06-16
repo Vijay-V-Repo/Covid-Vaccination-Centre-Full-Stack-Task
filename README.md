@@ -58,8 +58,6 @@ Once you have the prerequisites installed, follow the below steps to run the app
 
 ## Application Preview
 
-![Screenshot (104)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/8cb4216d-7581-4107-bf30-e4517ac13bf9)
-
 ![Screenshot (106)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/af8af100-84f3-47e7-8046-b4e962292252)
 
 ![Screenshot (111)](https://github.com/vijaycs20/DevRev-Covid-Vaccination-Centre-Full-Stack-Task/assets/74922968/7b82a02d-00ae-48a1-bc65-8404ba6a9859)
