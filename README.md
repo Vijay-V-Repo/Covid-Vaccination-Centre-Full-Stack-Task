@@ -1,4 +1,4 @@
-# DevRev Task : Covid-Vaccination-Booking (Full Stack)
+# Covid-Vaccination-Booking (Full Stack)
 
 ## About the Task 
 A web application for COVID vaccination booking. It allows users to sign up, log in, search for vaccination centers and working hours, apply for a vaccination slot, and log out. 
